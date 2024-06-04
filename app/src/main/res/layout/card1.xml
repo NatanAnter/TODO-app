@@ -1,0 +1,84 @@
+<!-- res/layout/card1.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/my_default_margin"
+    android:background="@color/material_on_background_emphasis_medium"
+    app:cardCornerRadius="@dimen/my_default_card_radius">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/starButton"
+                android:layout_width="@dimen/my_default_button_size"
+                android:layout_height="@dimen/my_default_button_size"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/star"
+                android:padding="@dimen/my_default_button_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_star_not_chosen"
+                app:tint="?attr/colorPrimary" />
+
+            <EditText
+                android:id="@+id/header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/enter_header"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <ImageButton
+                android:id="@+id/scheduleButton"
+                android:layout_width="@dimen/my_default_button_size"
+                android:layout_height="@dimen/my_default_button_size"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/delete_card"
+                android:padding="@dimen/my_default_button_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_time"
+                app:tint="?attr/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="@dimen/my_default_button_size"
+                android:layout_height="@dimen/my_default_button_size"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/delete_card"
+                android:padding="@dimen/my_default_button_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_delete_trash"
+                app:tint="?attr/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <!-- RecyclerView for Check Items -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rowsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Button for adding check items to the card -->
+        <Button
+            android:id="@+id/addRowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_row" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView><!---->
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/ic_menu"
+        android:iconTint="#FF0000"
+
+        android:orderInCategory="100"
+        android:title="@string/menu"
+        app:showAsAction="always">
+        <menu>
+            <!--<item
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_setting"
+                app:tint="?attr/colorPrimary"
+                android:title="@string/setting" />-->
+            <item
+                android:id="@+id/theme"
+                android:icon="@drawable/ic_theme"
+                app:tint="?attr/colorPrimary"
+                android:title="@string/theme" />
+            <item
+                android:id="@+id/data"
+                android:icon="@drawable/ic_data"
+                app:tint="?attr/colorPrimary"
+                android:title="@string/data" />
+        </menu>
+    </item>
+</menu>

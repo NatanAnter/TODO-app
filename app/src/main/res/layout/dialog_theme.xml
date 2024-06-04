@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_theme"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/my_default_card_margin"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioThemeDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioThemeDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/system_default"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioThemeLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/light"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_primary_color"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/my_default_card_margin"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioColorDynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dynamic_colors_android_12"
+            android:textSize="16sp" />
+        <RadioButton
+            android:id="@+id/radioColorDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_colors"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_app_orientation"
+        android:textSize="18sp" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupOrientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/my_default_card_margin"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioOrientationLTR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/left_to_right"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioOrientationDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/system_default"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioOrientationRTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/right_to_left"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/cancel"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><!-- res/layout/card_add.xml -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_add"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/my_default_margin"
+    android:background="@color/material_on_background_emphasis_medium"
+    app:cardCornerRadius="@dimen/my_default_card_radius">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/addCard1Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/my_default_add_card_button_size"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add_card_1"/>
+
+            <ImageButton
+                android:id="@+id/addCard2Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/my_default_add_card_button_size"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add_card_2" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/addCard3Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/my_default_add_card_button_size"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add_card_3" />
+            <ImageButton
+                android:id="@+id/addCard4Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/my_default_add_card_button_size"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add_card_4" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

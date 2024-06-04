@@ -1,0 +1,111 @@
+<!-- res/layout/card1.xml -->
+<androidx.cardview.widget.CardView
+    android:id="@+id/card1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:background="@color/material_on_background_emphasis_medium"
+    app:cardCornerRadius="@dimen/my_default_card_margin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/starButton"
+                android:layout_width="@dimen/my_default_button_size"
+                android:layout_height="@dimen/my_default_button_size"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/my_default_button_padding"
+                android:src="@drawable/ic_star_not_chosen"
+                app:tint="?attr/colorPrimary"
+                android:contentDescription="@string/star" />
+            <EditText
+                android:id="@+id/header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/enter_header"
+                android:importantForAutofill="no"
+                android:inputType="text"/>
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="@dimen/my_default_button_size"
+                android:layout_height="@dimen/my_default_button_size"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/my_default_button_padding"
+                android:src="@drawable/ic_delete_trash"
+                app:tint="?attr/colorPrimary"
+                android:contentDescription="@string/delete_card" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/my_default_margin"
+            android:layout_marginHorizontal="@dimen/my_default_margin">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:indeterminate="false"
+                android:max="100"
+                android:progressTint="?attr/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="?attr/colorOnPrimary"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/my_default_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goal"
+                android:layout_marginEnd="@dimen/my_default_margin"/>
+            <EditText
+                android:id="@+id/desirableScoreEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/desired_score"
+                android:maxLength="9"
+                android:inputType="number"
+                android:importantForAutofill="no" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rowsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/addRowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_row" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+    <!---->
+

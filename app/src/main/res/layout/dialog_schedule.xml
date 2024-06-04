@@ -1,0 +1,278 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/my_default_card_margin">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="schedule" />
+
+
+    <!-- Radio Group -->
+    <RadioGroup
+        android:id="@+id/radioGroupScheduleType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/optionScheduleRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="specificDate" />
+
+        <RadioButton
+            android:id="@+id/optionRepeatRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Repeat" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSpecificDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Date Question -->
+        <TextView
+            android:id="@+id/dateQuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="choose date" />
+
+
+        <!-- Date Picker Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- EditText for displaying the chosen date -->
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:hint="Select Date"
+                android:inputType="date" />
+
+            <!-- Button to trigger the DatePickerDialog -->
+            <Button
+                android:id="@+id/datePickerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Date" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timeQuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="choose time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- EditText for displaying the chosen date -->
+            <EditText
+                android:id="@+id/editTextTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:hint="Select Time"
+                android:inputType="date" />
+
+            <!-- Button to trigger the DatePickerDialog -->
+            <Button
+                android:id="@+id/timePickerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Time" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/questionATextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="choose duration" />
+
+        <!-- Combo Box A -->
+        <Spinner
+            android:id="@+id/comboBoxASpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/question2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/questionBTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="question" />
+
+            <!-- Combo Box B -->
+            <EditText
+                android:id="@+id/numberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter number"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <!-- Calendar Picker -->
+        <!-- here  i need a specific thing. I need to make the user to be able to pick a range of date - which mean that
+          the user will be abel to pick two date in the same calender.-->
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/daysOfTheWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/dateRangeQuestionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chose range" />
+
+            <CheckBox
+                android:id="@+id/checkboxSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday" />
+
+            <CheckBox
+                android:id="@+id/checkboxMonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday" />
+
+            <CheckBox
+                android:id="@+id/checkboxTuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tuesday" />
+
+            <CheckBox
+                android:id="@+id/checkboxWednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wednesday" />
+
+            <CheckBox
+                android:id="@+id/checkboxThursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thursday" />
+
+            <CheckBox
+                android:id="@+id/checkboxFriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday" />
+
+            <CheckBox
+                android:id="@+id/checkboxSaturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturday" />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- EditText for displaying the chosen date -->
+        <EditText
+            android:id="@+id/editTextFromDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:hint="Select start Date"
+            android:inputType="date" />
+
+        <!-- Button to trigger the DatePickerDialog -->
+        <Button
+            android:id="@+id/rangeStartTimePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- EditText for displaying the chosen date -->
+        <EditText
+            android:id="@+id/editTextToDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:hint="Select End Date"
+            android:inputType="date" />
+
+        <!-- Button to trigger the DatePickerDialog -->
+        <Button
+            android:id="@+id/rangeEndTimePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Date" />
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/my_default_margin"
+            android:text="Cancel" />
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+    </LinearLayout>
+
+
+</LinearLayout>
